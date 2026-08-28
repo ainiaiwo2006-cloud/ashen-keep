@@ -42,7 +42,7 @@
   let gold, lives, wave, selectedType, selectedTower;
   let towers, enemies, shots, particles;
   let spawning, spawnQueue, spawnTimer;
-  let mode; // title playing win lose
+  let mode;
   let last = 0;
 
   function expandPath(pts) {
@@ -305,7 +305,6 @@
         }
       }
     }
-    // keep on the right
     const kx = 18 * TILE, ky = 4 * TILE;
     ctx.fillStyle = "#6d6a66";
     ctx.fillRect(kx, ky, TILE * 2, TILE * 4);
