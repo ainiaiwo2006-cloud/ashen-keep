@@ -1,0 +1,85 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  background: #1a140c;
+  color: #f3e6c4;
+  font-family: "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+  touch-action: manipulation;
+  user-select: none;
+}
+#wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 8px 10px;
+  background: linear-gradient(#2a2214, #1c160e);
+  border-bottom: 3px solid #8a6a2a;
+}
+.hud-brand {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ffd36a;
+}
+.hud-stat b { color: #ffe9a8; }
+#btn-wave, #btn-start, #btn-upgrade, #btn-sell, .tower-btn {
+  font: inherit;
+  cursor: pointer;
+  border: 2px solid #c9a44a;
+  background: #3b2c14;
+  color: #ffe9a8;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+#btn-wave { margin-left: auto; background: #5a2a12; }
+#game {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #3d6b2c;
+  image-rendering: pixelated;
+}
+#buildbar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px;
+  background: #22180e;
+}
+.tower-btn small { display: block; color: #c9a44a; }
+.tower-btn.on, #btn-wave:disabled { outline: 2px solid #ffe9a8; }
+#hint {
+  font-size: 12px;
+  padding: 6px 10px 12px;
+  color: #cbb98a;
+}
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 4, 0.78);
+  align-items: center;
+  justify-content: center;
+}
+#overlay.show { display: flex; }
+.panel {
+  width: min(420px, 92vw);
+  background: #2a1e10;
+  border: 3px solid #c9a44a;
+  padding: 28px 22px;
+  text-align: center;
+}
+.panel h1 { color: #ffd36a; font-size: 28px; margin-bottom: 6px; }
+.panel .sub { color: #e8c878; margin-bottom: 10px; }
+.panel p { font-size: 14px; margin-bottom: 16px; line-height: 1.5; }
+#btn-start { font-size: 18px; padding: 10px 28px; }
+@media (pointer: coarse), (max-width: 900px) {
+  .tower-btn, #btn-wave, #btn-upgrade, #btn-sell { min-height: 56px; font-size: 15px; }
+}
