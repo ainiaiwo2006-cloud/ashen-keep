@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>灰烬要塞 Ashen Keep</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <header id="hud">
+      <div class="hud-brand">灰烬要塞</div>
+      <div class="hud-stat">金 <b id="gold">120</b></div>
+      <div class="hud-stat">生命 <b id="lives">20</b></div>
+      <div class="hud-stat">波次 <b id="wave">0</b>/8</div>
+      <button type="button" id="btn-wave">下一波</button>
+    </header>
+    <canvas id="game" width="960" height="576"></canvas>
+    <div id="buildbar">
+      <button type="button" class="tower-btn" data-type="archer">弓塔<br /><small>60金</small></button>
+      <button type="button" class="tower-btn" data-type="cannon">炮塔<br /><small>90金</small></button>
+      <button type="button" class="tower-btn" data-type="mage">法师塔<br /><small>110金</small></button>
+      <button type="button" id="btn-upgrade">升级</button>
+      <button type="button" id="btn-sell">卖掉</button>
+    </div>
+    <p id="hint">点草地放塔。兽人走土路，别让它们冲进右边的要塞。</p>
+  </div>
+  <div id="overlay" class="show">
+    <div class="panel">
+      <h1>灰烬要塞</h1>
+      <p class="sub">人族守关 · 兽人来袭</p>
+      <p>原创魔兽风塔防，未使用暴雪名称或素材。</p>
+      <button type="button" id="btn-start">出战</button>
+    </div>
+  </div>
+  <script src="js/game.js"></script>
+</body>
+</html>
